@@ -8,13 +8,6 @@ class Solution {
             map.merge(i, 1, Integer::sum);
         }
 
-        map.entrySet()
-                .stream()
-                .filter(entry ->
-                        entry.getValue() != 2
-                )
-                .mapToInt(entry -> entry.getKey()).forEach(System.out::println);
-
         switch(map.size()){
             case 1:
                 return map.keySet().iterator().next() * 1111;
